@@ -50,3 +50,5 @@ The frontend of the Food Pantry System is crafted using a combination of [Bootst
 
 The combination of Supabase Client for the backend and Bootstrap, HTML, and JavaScript for the frontend creates a powerful and user-centric Food Pantry System. For more details on the project, please refer to the [About Section](https://devpost.com/software/food-pantry-fkx9jn).
 
+
+Live Project Link : [PANTRY] (https://pantry-ez9.pages.dev/)
