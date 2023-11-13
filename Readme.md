@@ -21,3 +21,32 @@ Through the development of the Food Pantry system, we gained valuable insights i
 
 ## What's next for Food Pantry
 Looking ahead, we plan to further enhance the features of the Food Pantry system. This includes expanding the range of available resources, refining the user experience based on feedback, and exploring additional functionalities to better support the well-being of students. The journey doesn't end here; it's a continuous effort to evolve and adapt to the ever-changing needs of the student community.
+
+# Codes & Clients We Used :
+
+## Backend: Supabase Client
+
+The Food Pantry System relies on the robust backend provided by the [Supabase Client](https://supabase.io/). Supabase is an open-source platform that offers a PostgreSQL database, authentication, and real-time functionalities. The Supabase Client allows seamless integration with the Supabase backend, enabling efficient data management and interaction.
+
+### Key features of Supabase Client include:
+
+- **Database Integration:** Utilizing the PostgreSQL database provided by Supabase, the backend efficiently stores and manages data related to pantry resources, user profiles, and system interactions.
+
+- **Authentication:** Supabase Client facilitates secure user authentication, ensuring that only authorized individuals can access and interact with the Food Pantry System.
+
+- **Real-time Functionality:** Leveraging real-time capabilities provided by [Supabase](https://supabase.io/), the system can deliver instant updates to users, enhancing the overall user experience.
+
+## Frontend: Bootstrap CSS Framework, HTML, and JavaScript
+
+The frontend of the Food Pantry System is crafted using a combination of [Bootstrap](https://getbootstrap.com/), HTML, and JavaScript to deliver a visually appealing and user-friendly interface.
+
+### Key aspects of the frontend technologies include:
+
+- **Bootstrap CSS Framework:** Bootstrap provides a responsive and customizable styling framework, ensuring a consistent and visually pleasing layout across various devices. Its pre-designed components enhance the efficiency of frontend development.
+
+- **HTML:** HTML is employed to structure the content of the website, defining the various elements and their relationships. It forms the backbone of the webpage, organizing information for effective presentation.
+
+- **JavaScript:** JavaScript adds dynamic behavior to the Food Pantry System, enabling interactive features and real-time updates. It enhances the user experience by providing a more responsive and engaging platform.
+
+The combination of Supabase Client for the backend and Bootstrap, HTML, and JavaScript for the frontend creates a powerful and user-centric Food Pantry System. For more details on the project, please refer to the [About Section](https://devpost.com/software/food-pantry-fkx9jn).
+
