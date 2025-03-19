@@ -336,7 +336,7 @@
             <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3338.2003020640927!2d-97.15193728905577!3d33.208844673375545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864dcba8563f545d%3A0x2b622d45db753813!2sUnt%20Food%20Pantry!5e0!3m2!1sen!2sus!4v1699736357355!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
           </div>
           <div class="form-group mt-3">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="" id="#contact-form" method="post" role="form" class="php-email-form">
              
               <div class="row">
                
@@ -350,7 +350,7 @@
               </div>
               
               <div class="mt-3 form-group">
-                <input type="text" name="id" class="form-control" id="number" maxlength="8" oninput="validateInput(this)" placeholder="Your ID" required>
+                <input type="text" name="Collage-ID" class="form-control" id="number" maxlength="8" oninput="validateInput(this)" placeholder="Your ID" required>
               
               </div>
 
@@ -477,16 +477,44 @@
     }
  </script>
 
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
 <script>
-  
-const { createClient } = supabase
-
-// Create a single supabase client for interacting with your database
-supabase = createClient('https://hsqszpwokgbkmfyxbzvw.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhzcXN6cHdva2dia21meXhienZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTg3MzQwODIsImV4cCI6MjAxNDMxMDA4Mn0.XNy6ugyZd8vt8k5SWYWswULMKgqvHeBRPf4Q08CnR0Q')
 </script>
 
+<script>
+   const { createClient } = supabase
 
+// Create a single supabase client for interacting with your database
+supabase = createClient('https://qtyfbsqtdylaaehizitz.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF0eWZic3F0ZHlsYWFlaGl6aXR6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI0MjMyNjgsImV4cCI6MjA1Nzk5OTI2OH0.7o6dpID1RIECEPAGVy2e3Qb3ktqb5iPNzpTpDNWKgus')
+
+  const form = document.querySelector('#contact-form')
+  form.addEventListener('submit', async (event) => {
+      event.preventDefault()
+
+      const formInputs = form.querySelectorAll('input, select')
+
+      let submision = {}
+
+      formInputs.forEach(element => {
+        const { value, name } = element
+        if (value) {
+            submision[name] = value
+        }
+      })
+
+      const { error } = await supabase.from('Entries').insert([submision], { returning: 'minimal'})
+
+      if (error) {
+          alert('There was an error please try again')
+      } else {
+          alert('Thanks for contacting us')
+      }
+
+      formInputs.forEach(element => element.value = '')
+
+  })
+</script>
 
 </body>
 
